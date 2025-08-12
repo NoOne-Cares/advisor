@@ -1,0 +1,702 @@
+[
+  {
+    "brand": "OfficePro",
+    "product_name": "Wireless Mouse",
+    "price": 7462,
+    "category": "Office Supplies",
+    "description": "Compact design with multiple functions."
+  },
+  {
+    "brand": "Smartify",
+    "product_name": "Wireless Charger",
+    "price": 3853,
+    "category": "Smart Gadgets",
+    "description": "Built for performance and longevity."
+  },
+  {
+    "brand": "HomePro",
+    "product_name": "Robot Vacuum",
+    "price": 2731,
+    "category": "Home Appliances",
+    "description": "Essential item for everyday tasks."
+  },
+  {
+    "brand": "KitchenKing",
+    "product_name": "Non-stick Pan",
+    "price": 7008,
+    "category": "Kitchen Essentials",
+    "description": "Compact design with multiple functions."
+  },
+  {
+    "brand": "UrbanWear",
+    "product_name": "Sneakers",
+    "price": 4764,
+    "category": "Fashion and Apparel",
+    "description": "Promotes wellness using innovative technology."
+  },
+  {
+    "brand": "UrbanWear",
+    "product_name": "Graphic T-Shirt",
+    "price": 1005,
+    "category": "Fashion and Apparel",
+    "description": "Built for performance and longevity."
+  },
+  {
+    "brand": "StationMate",
+    "product_name": "Ergonomic Chair",
+    "price": 7784,
+    "category": "Office Supplies",
+    "description": "Designed for modern lifestyle needs."
+  },
+  {
+    "brand": "OfficePro",
+    "product_name": "Wireless Mouse",
+    "price": 5505,
+    "category": "Office Supplies",
+    "description": "Essential item for everyday tasks."
+  },
+  {
+    "brand": "Toyland",
+    "product_name": "Building Blocks",
+    "price": 2961,
+    "category": "Toys and Games",
+    "description": "Easy to use and highly effective."
+  },
+  {
+    "brand": "Winston",
+    "product_name": "Smart Posture Corrector",
+    "price": 4598,
+    "category": "Healthtech and Wellness",
+    "description": "Promotes wellness using innovative technology."
+  },
+  {
+    "brand": "CookEase",
+    "product_name": "Electric Kettle",
+    "price": 4366,
+    "category": "Kitchen Essentials",
+    "description": "Designed for modern lifestyle needs."
+  },
+  {
+    "brand": "StationMate",
+    "product_name": "Desk Organizer",
+    "price": 2789,
+    "category": "Office Supplies",
+    "description": "Perfect for active individuals."
+  },
+  {
+    "brand": "PureSkin",
+    "product_name": "Facial Steamer",
+    "price": 5974,
+    "category": "Beauty and Personal Care",
+    "description": "Enhances convenience and comfort."
+  },
+  {
+    "brand": "Beautify",
+    "product_name": "Hair Straightener",
+    "price": 3454,
+    "category": "Beauty and Personal Care",
+    "description": "Perfect for active individuals."
+  },
+  {
+    "brand": "PowerCore",
+    "product_name": "Smart Water Bottle",
+    "price": 6751,
+    "category": "Fitness and Sports",
+    "description": "Ideal for home or office use."
+  },
+  {
+    "brand": "Toyland",
+    "product_name": "Building Blocks",
+    "price": 4867,
+    "category": "Toys and Games",
+    "description": "Enhances convenience and comfort."
+  },
+  {
+    "brand": "GameZone",
+    "product_name": "Board Game",
+    "price": 7135,
+    "category": "Toys and Games",
+    "description": "Perfect for active individuals."
+  },
+  {
+    "brand": "GreenGrow",
+    "product_name": "LED Solar Lights",
+    "price": 5432,
+    "category": "Outdoor and Garden",
+    "description": "Ideal for home or office use."
+  },
+  {
+    "brand": "VivaCare",
+    "product_name": "Smart Posture Corrector",
+    "price": 5763,
+    "category": "Healthtech and Wellness",
+    "description": "Built for performance and longevity."
+  },
+  {
+    "brand": "OfficePro",
+    "product_name": "Ergonomic Chair",
+    "price": 5411,
+    "category": "Office Supplies",
+    "description": "Perfect for active individuals."
+  },
+  {
+    "brand": "CookEase",
+    "product_name": "Blender",
+    "price": 4610,
+    "category": "Kitchen Essentials",
+    "description": "Promotes wellness using innovative technology."
+  },
+  {
+    "brand": "VivaCare",
+    "product_name": "Digital Thermometer",
+    "price": 9516,
+    "category": "Healthtech and Wellness",
+    "description": "Safe and reliable technology."
+  },
+  {
+    "brand": "FitLife",
+    "product_name": "Smart Water Bottle",
+    "price": 3184,
+    "category": "Fitness and Sports",
+    "description": "Simple solution to complex problems."
+  },
+  {
+    "brand": "Toyland",
+    "product_name": "Board Game",
+    "price": 9764,
+    "category": "Toys and Games",
+    "description": "Improves daily routine effortlessly."
+  },
+  {
+    "brand": "GameZone",
+    "product_name": "Remote Car",
+    "price": 1160,
+    "category": "Toys and Games",
+    "description": "Durable, efficient, and stylish."
+  },
+  {
+    "brand": "ThermoLite",
+    "product_name": "Electric LED Comb",
+    "price": 8775,
+    "category": "Healthtech and Wellness",
+    "description": "Easy to use and highly effective."
+  },
+  {
+    "brand": "FitLife",
+    "product_name": "Yoga Mat",
+    "price": 9184,
+    "category": "Fitness and Sports",
+    "description": "Easy to use and highly effective."
+  },
+  {
+    "brand": "OutdoorMax",
+    "product_name": "Garden Hose",
+    "price": 4291,
+    "category": "Outdoor and Garden",
+    "description": "Essential item for everyday tasks."
+  },
+  {
+    "brand": "GlowUp",
+    "product_name": "Hair Straightener",
+    "price": 4850,
+    "category": "Beauty and Personal Care",
+    "description": "Safe and reliable technology."
+  },
+  {
+    "brand": "KitchenKing",
+    "product_name": "Non-stick Pan",
+    "price": 3067,
+    "category": "Kitchen Essentials",
+    "description": "Enhances convenience and comfort."
+  },
+  {
+    "brand": "NatureLine",
+    "product_name": "Camping Chair",
+    "price": 1358,
+    "category": "Outdoor and Garden",
+    "description": "Great value and quality product."
+  },
+  {
+    "brand": "OfficePro",
+    "product_name": "Wireless Mouse",
+    "price": 1083,
+    "category": "Office Supplies",
+    "description": "Improves daily routine effortlessly."
+  },
+  {
+    "brand": "NatureLine",
+    "product_name": "Garden Hose",
+    "price": 2217,
+    "category": "Outdoor and Garden",
+    "description": "Simple solution to complex problems."
+  },
+  {
+    "brand": "ChefPro",
+    "product_name": "Electric Kettle",
+    "price": 2870,
+    "category": "Kitchen Essentials",
+    "description": "Enhances convenience and comfort."
+  },
+  {
+    "brand": "TechNova",
+    "product_name": "Wireless Charger",
+    "price": 1965,
+    "category": "Smart Gadgets",
+    "description": "Built for performance and longevity."
+  },
+  {
+    "brand": "FitLife",
+    "product_name": "Smart Water Bottle",
+    "price": 3061,
+    "category": "Fitness and Sports",
+    "description": "Perfect for active individuals."
+  },
+  {
+    "brand": "Gadgetron",
+    "product_name": "Bluetooth Tracker",
+    "price": 3527,
+    "category": "Smart Gadgets",
+    "description": "Safe and reliable technology."
+  },
+  {
+    "brand": "GameZone",
+    "product_name": "Building Blocks",
+    "price": 1742,
+    "category": "Toys and Games",
+    "description": "Compact design with multiple functions."
+  },
+  {
+    "brand": "CleanMax",
+    "product_name": "Mini Heater",
+    "price": 2238,
+    "category": "Home Appliances",
+    "description": "Promotes wellness using innovative technology."
+  },
+  {
+    "brand": "Moda",
+    "product_name": "Graphic T-Shirt",
+    "price": 1059,
+    "category": "Fashion and Apparel",
+    "description": "Essential item for everyday tasks."
+  },
+  {
+    "brand": "ActivePro",
+    "product_name": "Resistance Bands",
+    "price": 8697,
+    "category": "Fitness and Sports",
+    "description": "Durable, efficient, and stylish."
+  },
+  {
+    "brand": "GreenGrow",
+    "product_name": "Camping Chair",
+    "price": 5846,
+    "category": "Outdoor and Garden",
+    "description": "Compact design with multiple functions."
+  },
+  {
+    "brand": "StationMate",
+    "product_name": "Desk Organizer",
+    "price": 3610,
+    "category": "Office Supplies",
+    "description": "Compact design with multiple functions."
+  },
+  {
+    "brand": "Electra",
+    "product_name": "Air Purifier",
+    "price": 5181,
+    "category": "Home Appliances",
+    "description": "Portable and user-friendly device."
+  },
+  {
+    "brand": "NatureLine",
+    "product_name": "Camping Chair",
+    "price": 9249,
+    "category": "Outdoor and Garden",
+    "description": "Ideal for home or office use."
+  },
+  {
+    "brand": "Gadgetron",
+    "product_name": "Wireless Charger",
+    "price": 8098,
+    "category": "Smart Gadgets",
+    "description": "Enhances convenience and comfort."
+  },
+  {
+    "brand": "OutdoorMax",
+    "product_name": "Garden Hose",
+    "price": 7145,
+    "category": "Outdoor and Garden",
+    "description": "Easy to use and highly effective."
+  },
+  {
+    "brand": "Electra",
+    "product_name": "Air Purifier",
+    "price": 7085,
+    "category": "Home Appliances",
+    "description": "Improves daily routine effortlessly."
+  },
+  {
+    "brand": "Toyland",
+    "product_name": "Board Game",
+    "price": 4960,
+    "category": "Toys and Games",
+    "description": "Compact design with multiple functions."
+  },
+  {
+    "brand": "KitchenKing",
+    "product_name": "Non-stick Pan",
+    "price": 8788,
+    "category": "Kitchen Essentials",
+    "description": "Compact design with multiple functions."
+  },
+  {
+    "brand": "PlayFun",
+    "product_name": "Building Blocks",
+    "price": 1062,
+    "category": "Toys and Games",
+    "description": "Easy to use and highly effective."
+  },
+  {
+    "brand": "StyleX",
+    "product_name": "Denim Jacket",
+    "price": 1967,
+    "category": "Fashion and Apparel",
+    "description": "Easy to use and highly effective."
+  },
+  {
+    "brand": "Smartify",
+    "product_name": "Bluetooth Tracker",
+    "price": 5800,
+    "category": "Smart Gadgets",
+    "description": "Durable, efficient, and stylish."
+  },
+  {
+    "brand": "OutdoorMax",
+    "product_name": "Camping Chair",
+    "price": 7860,
+    "category": "Outdoor and Garden",
+    "description": "Simple solution to complex problems."
+  },
+  {
+    "brand": "GreenGrow",
+    "product_name": "Camping Chair",
+    "price": 4610,
+    "category": "Outdoor and Garden",
+    "description": "Perfect for active individuals."
+  },
+  {
+    "brand": "StyleX",
+    "product_name": "Graphic T-Shirt",
+    "price": 4602,
+    "category": "Fashion and Apparel",
+    "description": "Durable, efficient, and stylish."
+  },
+  {
+    "brand": "Beautify",
+    "product_name": "LED Face Mask",
+    "price": 6023,
+    "category": "Beauty and Personal Care",
+    "description": "Essential item for everyday tasks."
+  },
+  {
+    "brand": "NatureLine",
+    "product_name": "Camping Chair",
+    "price": 9104,
+    "category": "Outdoor and Garden",
+    "description": "Simple solution to complex problems."
+  },
+  {
+    "brand": "TechNova",
+    "product_name": "Bluetooth Tracker",
+    "price": 7223,
+    "category": "Smart Gadgets",
+    "description": "Designed for modern lifestyle needs."
+  },
+  {
+    "brand": "Beautify",
+    "product_name": "Hair Straightener",
+    "price": 3340,
+    "category": "Beauty and Personal Care",
+    "description": "Built for performance and longevity."
+  },
+  {
+    "brand": "Beautify",
+    "product_name": "Hair Straightener",
+    "price": 9481,
+    "category": "Beauty and Personal Care",
+    "description": "Safe and reliable technology."
+  },
+  {
+    "brand": "Smartify",
+    "product_name": "Smart Plug",
+    "price": 5772,
+    "category": "Smart Gadgets",
+    "description": "Improves daily routine effortlessly."
+  },
+  {
+    "brand": "Electra",
+    "product_name": "Air Purifier",
+    "price": 1541,
+    "category": "Home Appliances",
+    "description": "Promotes wellness using innovative technology."
+  },
+  {
+    "brand": "TechNova",
+    "product_name": "Smart Plug",
+    "price": 7760,
+    "category": "Smart Gadgets",
+    "description": "Portable and user-friendly device."
+  },
+  {
+    "brand": "Moda",
+    "product_name": "Denim Jacket",
+    "price": 1415,
+    "category": "Fashion and Apparel",
+    "description": "Easy to use and highly effective."
+  },
+  {
+    "brand": "KitchenKing",
+    "product_name": "Non-stick Pan",
+    "price": 6962,
+    "category": "Kitchen Essentials",
+    "description": "Improves daily routine effortlessly."
+  },
+  {
+    "brand": "FitLife",
+    "product_name": "Smart Water Bottle",
+    "price": 7545,
+    "category": "Fitness and Sports",
+    "description": "Essential item for everyday tasks."
+  },
+  {
+    "brand": "PureSkin",
+    "product_name": "LED Face Mask",
+    "price": 8736,
+    "category": "Beauty and Personal Care",
+    "description": "Great value and quality product."
+  },
+  {
+    "brand": "ActivePro",
+    "product_name": "Yoga Mat",
+    "price": 1844,
+    "category": "Fitness and Sports",
+    "description": "Enhances convenience and comfort."
+  },
+  {
+    "brand": "NatureLine",
+    "product_name": "Garden Hose",
+    "price": 6995,
+    "category": "Outdoor and Garden",
+    "description": "Ideal for home or office use."
+  },
+  {
+    "brand": "KitchenKing",
+    "product_name": "Non-stick Pan",
+    "price": 2682,
+    "category": "Kitchen Essentials",
+    "description": "Simple solution to complex problems."
+  },
+  {
+    "brand": "Smartify",
+    "product_name": "Wireless Charger",
+    "price": 1383,
+    "category": "Smart Gadgets",
+    "description": "Designed for modern lifestyle needs."
+  },
+  {
+    "brand": "OutdoorMax",
+    "product_name": "Camping Chair",
+    "price": 5810,
+    "category": "Outdoor and Garden",
+    "description": "Designed for modern lifestyle needs."
+  },
+  {
+    "brand": "OfficePro",
+    "product_name": "Desk Organizer",
+    "price": 1958,
+    "category": "Office Supplies",
+    "description": "Improves daily routine effortlessly."
+  },
+  {
+    "brand": "CookEase",
+    "product_name": "Electric Kettle",
+    "price": 3868,
+    "category": "Kitchen Essentials",
+    "description": "Durable, efficient, and stylish."
+  },
+  {
+    "brand": "Beautify",
+    "product_name": "Hair Straightener",
+    "price": 7257,
+    "category": "Beauty and Personal Care",
+    "description": "Enhances convenience and comfort."
+  },
+  {
+    "brand": "Gadgetron",
+    "product_name": "Wireless Charger",
+    "price": 6095,
+    "category": "Smart Gadgets",
+    "description": "Portable and user-friendly device."
+  },
+  {
+    "brand": "Smartify",
+    "product_name": "Bluetooth Tracker",
+    "price": 8067,
+    "category": "Smart Gadgets",
+    "description": "Safe and reliable technology."
+  },
+  {
+    "brand": "KitchenKing",
+    "product_name": "Non-stick Pan",
+    "price": 7013,
+    "category": "Kitchen Essentials",
+    "description": "Safe and reliable technology."
+  },
+  {
+    "brand": "OfficePro",
+    "product_name": "Desk Organizer",
+    "price": 5473,
+    "category": "Office Supplies",
+    "description": "Enhances convenience and comfort."
+  },
+  {
+    "brand": "PowerCore",
+    "product_name": "Smart Water Bottle",
+    "price": 7087,
+    "category": "Fitness and Sports",
+    "description": "Easy to use and highly effective."
+  },
+  {
+    "brand": "VivaCare",
+    "product_name": "Electric LED Comb",
+    "price": 8305,
+    "category": "Healthtech and Wellness",
+    "description": "Portable and user-friendly device."
+  },
+  {
+    "brand": "ThermoLite",
+    "product_name": "Digital Thermometer",
+    "price": 4217,
+    "category": "Healthtech and Wellness",
+    "description": "Essential item for everyday tasks."
+  },
+  {
+    "brand": "Toyland",
+    "product_name": "Building Blocks",
+    "price": 7677,
+    "category": "Toys and Games",
+    "description": "Great value and quality product."
+  },
+  {
+    "brand": "Electra",
+    "product_name": "Mini Heater",
+    "price": 3600,
+    "category": "Home Appliances",
+    "description": "Safe and reliable technology."
+  },
+  {
+    "brand": "Beautify",
+    "product_name": "Facial Steamer",
+    "price": 2326,
+    "category": "Beauty and Personal Care",
+    "description": "Improves daily routine effortlessly."
+  },
+  {
+    "brand": "TechNova",
+    "product_name": "Bluetooth Tracker",
+    "price": 9218,
+    "category": "Smart Gadgets",
+    "description": "Portable and user-friendly device."
+  },
+  {
+    "brand": "GameZone",
+    "product_name": "Building Blocks",
+    "price": 1227,
+    "category": "Toys and Games",
+    "description": "Enhances convenience and comfort."
+  },
+  {
+    "brand": "PlayFun",
+    "product_name": "Board Game",
+    "price": 6036,
+    "category": "Toys and Games",
+    "description": "Simple solution to complex problems."
+  },
+  {
+    "brand": "GlowUp",
+    "product_name": "Hair Straightener",
+    "price": 7016,
+    "category": "Beauty and Personal Care",
+    "description": "Great value and quality product."
+  },
+  {
+    "brand": "Moda",
+    "product_name": "Denim Jacket",
+    "price": 7104,
+    "category": "Fashion and Apparel",
+    "description": "Portable and user-friendly device."
+  },
+  {
+    "brand": "TechNova",
+    "product_name": "Wireless Charger",
+    "price": 1133,
+    "category": "Smart Gadgets",
+    "description": "Simple solution to complex problems."
+  },
+  {
+    "brand": "ActivePro",
+    "product_name": "Yoga Mat",
+    "price": 1308,
+    "category": "Fitness and Sports",
+    "description": "Designed for modern lifestyle needs."
+  },
+  {
+    "brand": "OfficePro",
+    "product_name": "Ergonomic Chair",
+    "price": 9103,
+    "category": "Office Supplies",
+    "description": "Enhances convenience and comfort."
+  },
+  {
+    "brand": "UrbanWear",
+    "product_name": "Denim Jacket",
+    "price": 6921,
+    "category": "Fashion and Apparel",
+    "description": "Ideal for home or office use."
+  },
+  {
+    "brand": "OfficePro",
+    "product_name": "Wireless Mouse",
+    "price": 8360,
+    "category": "Office Supplies",
+    "description": "Great value and quality product."
+  },
+  {
+    "brand": "PowerCore",
+    "product_name": "Smart Water Bottle",
+    "price": 8801,
+    "category": "Fitness and Sports",
+    "description": "Perfect for active individuals."
+  },
+  {
+    "brand": "OutdoorMax",
+    "product_name": "LED Solar Lights",
+    "price": 7859,
+    "category": "Outdoor and Garden",
+    "description": "Built for performance and longevity."
+  },
+  {
+    "brand": "Winston",
+    "product_name": "Smart Posture Corrector",
+    "price": 4302,
+    "category": "Healthtech and Wellness",
+    "description": "Promotes wellness using innovative technology."
+  },
+  {
+    "brand": "CleanMax",
+    "product_name": "Robot Vacuum",
+    "price": 2002,
+    "category": "Home Appliances",
+    "description": "Great value and quality product."
+  }
+]

@@ -1,37 +1,19 @@
-import axios from 'axios';
-
+import { GoogleGenAI, Type } from "@google/genai";
 import { useState } from 'react';
+import products from './products.json';
+import type {
+    GeminiProductRecommendation,
+    Product
+} from './types';
 
-
-import products from './products.json'; // or '../data/products.json'
-
-
-
-// Types
-type Product = {
-    brand: string;
-    product_name: string;
-    price: number;
-    category: string;
-    description: string;
-};
-
-type GeminiCategoryResponse = {
-    matchedCategory: string | null;
-    reason: string;
-};
-
-type GeminiProductRecommendation = {
-    product_name: string;
-    reason: string;
-};
 
 const typedProducts: Product[] = products;
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
-const API_KEY = 'YOUR_GEMINI_API_KEY'; // Replace with secure env variable
+const apiKey = process.env.EXPO_PUBLIC_GEMINI_API_KEY
+if (!apiKey) throw new Error("API key not found");
+const AI = new GoogleGenAI({ apiKey: apiKey })
 
 export const useProductRecommender = () => {
-    const [recommendation, setRecommendation] = useState<string | null>(null);
+    const [recommendation, setRecommendation] = useState<GeminiProductRecommendation | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -42,95 +24,125 @@ export const useProductRecommender = () => {
         setError(null);
         setRecommendation(null);
 
-        // Step 1: Match query to category
         const categoryPrompt = `
-Given the following product categories:
-${categoryList.join(', ')}
+                Given the following product categories:
+                ${categoryList.join(', ')}
 
-User query: "${query}"
+                User query: "${query}"
 
-Respond only in JSON format like this:
-{ "matchedCategory": "Kitchen Essentials", "reason": "User asked about cooking tools." }
+                Respond only in JSON format like this:
+                { "matchedCategory": "Kitchen Essentials"}
 
-If no category matches:
-{ "matchedCategory": null, "reason": "No matching category found." }
-`;
+                If no category matches:
+                { "matchedCategory": null }
+                `;
 
         try {
-            const categoryRes = await axios.post(
-                `${GEMINI_API_URL}?key=${API_KEY}`,
-                {
-                    contents: [{ parts: [{ text: categoryPrompt }] }]
+
+            const categoryRes = await AI.models.generateContent({
+                model: "gemini-2.5-flash",
+                contents: categoryPrompt,
+                config: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: Type.OBJECT,
+                        properties: {
+                            matchedCategory: { type: Type.STRING },
+                        },
+                        required: ["matchedCategory"],
+                    },
                 },
-                { headers: { 'Content-Type': 'application/json' } }
-            );
+            });
 
-            const categoryText = categoryRes.data.candidates?.[0]?.content?.parts?.[0]?.text;
-            const categoryParsed: GeminiCategoryResponse = JSON.parse(categoryText);
-
+            const response = categoryRes.text
+            if (!response) return
+            const categoryParsed = JSON.parse(response);
             if (!categoryParsed.matchedCategory) {
-                setRecommendation(`No matching category. Reason: ${categoryParsed.reason}`);
+                setRecommendation({
+                    product_name: "No Product found",
+                    reason: ""
+                });
+                setLoading(false)
                 return;
             }
 
-            const categoryProducts = productsList.filter(
+            const categoryProducts = typedProducts.filter(
                 p => p.category.toLowerCase() === categoryParsed.matchedCategory!.toLowerCase()
             );
 
             if (categoryProducts.length === 0) {
-                setRecommendation(`Matched category "${categoryParsed.matchedCategory}", but no products found.`);
+                setRecommendation({
+                    product_name: "No Product found",
+                    reason: ""
+                });
+                setLoading(false)
                 return;
             }
 
-            // Step 2: Recommend product from category
             const productsAsText = categoryProducts.map(p => (
                 `- ${p.product_name} by ${p.brand}: ${p.description} ($${(p.price / 100).toFixed(2)})`
             )).join('\n');
 
             const productPrompt = `
-A user is interested in: "${query}".
+                A user is interested in: "${query}".
 
-Here are products from the matched category "${categoryParsed.matchedCategory}":
+                Here are products from the matched category "${categoryParsed.matchedCategory}":
 
-${productsAsText}
-
-Pick one product that best fits the query. Respond only in JSON format like:
-{
-  "product_name": "Smart Water Bottle",
-  "reason": "Helps track hydration which is what user asked about."
-}
-`;
-
-            const productRes = await axios.post(
-                `${GEMINI_API_URL}?key=${API_KEY}`,
+                ${productsAsText}
+                
+                Pick one product that best fits the query.
+                And write the reson like you are selling the product and why the user should buy it keep it professional and short.
+                Respond only in JSON format like:
                 {
-                    contents: [{ parts: [{ text: productPrompt }] }]
+                "product_name": "Smart Water Bottle",
+                "reason": "Helps track hydration which is what user asked about."
+                }
+                `;
+
+            const productRes = await AI.models.generateContent({
+                model: "gemini-2.5-flash",
+                contents: productPrompt,
+                config: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: Type.OBJECT,
+                        properties: {
+                            product_name: { type: Type.STRING },
+                            reason: { type: Type.STRING },
+                        },
+                        required: ["product_name", "reason"],
+                    },
                 },
-                { headers: { 'Content-Type': 'application/json' } }
-            );
+            });
 
-            const productText = productRes.data.candidates?.[0]?.content?.parts?.[0]?.text;
-            const productParsed: GeminiProductRecommendation = JSON.parse(productText);
+            const recommendResponse = productRes.text
+            if (!recommendResponse) return
+            const matchedProduct = JSON.parse(recommendResponse);
 
-            const matchedProduct = categoryProducts.find(
-                p => p.product_name.toLowerCase() === productParsed.product_name.toLowerCase()
-            );
 
-            if (!matchedProduct) {
-                setRecommendation(`Gemini suggested "${productParsed.product_name}", but it wasn't found in the list.`);
-                return;
+            if (matchedProduct) {
+                setRecommendation(matchedProduct);
+                setLoading(false)
+            } else {
+                setRecommendation({
+                    product_name: "No Product found",
+                    reason: ""
+                });
+                setLoading(false)
             }
+            //function to genearte ai_conversation_log.md
 
-            setRecommendation(
-                `✅ Recommended: ${matchedProduct.product_name} by ${matchedProduct.brand} ($${(matchedProduct.price / 100).toFixed(2)})\n\nReason: ${productParsed.reason}`
-            );
+            // if (recommendation) {
+            //     logRecommendationToFile(query, recommendation)
+            // }
+
         } catch (err: any) {
             console.error(err);
-            setError("❌ Error getting product recommendation.");
+            setError("Error getting product recommendation.");
         } finally {
             setLoading(false);
         }
     };
 
-    return { recommend, recommendation, loading, error };
+    return { recommend, recommendation, loading, error }
 };

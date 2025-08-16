@@ -59,7 +59,9 @@ export const useProductRecommender = () => {
             const categoryParsed = JSON.parse(response);
             if (!categoryParsed.matchedCategory) {
                 setRecommendation({
+                    cetegory: "",
                     product_name: "No Product found",
+                    price: 0,
                     reason: ""
                 });
                 setLoading(false)
@@ -72,7 +74,9 @@ export const useProductRecommender = () => {
 
             if (categoryProducts.length === 0) {
                 setRecommendation({
+                    cetegory: "",
                     product_name: "No Product found",
+                    price: 0,
                     reason: ""
                 });
                 setLoading(false)
@@ -80,7 +84,7 @@ export const useProductRecommender = () => {
             }
 
             const productsAsText = categoryProducts.map(p => (
-                `- ${p.product_name} by ${p.brand}: ${p.description} ($${(p.price / 100).toFixed(2)})`
+                `- ${p.product_name} by ${p.brand}: ${p.description} (₹${p.price})`
             )).join('\n');
 
             const productPrompt = `
@@ -91,10 +95,13 @@ export const useProductRecommender = () => {
                 ${productsAsText}
                 
                 Pick one product that best fits the query.
-                And write the reson like you are selling the product and why the user should buy it keep it professional and short.
+                And write the reson like you are selling the product and why the user should buy it
+                and keep it professional and short.
                 Respond only in JSON format like:
                 {
+                "cetegory":"Kitchen",
                 "product_name": "Smart Water Bottle",
+                "price": 2002,
                 "reason": "Helps track hydration which is what user asked about."
                 }
                 `;
@@ -107,10 +114,12 @@ export const useProductRecommender = () => {
                     responseSchema: {
                         type: Type.OBJECT,
                         properties: {
+                            cetegory: { type: Type.STRING },
                             product_name: { type: Type.STRING },
+                            price: { type: Type.INTEGER },
                             reason: { type: Type.STRING },
                         },
-                        required: ["product_name", "reason"],
+                        required: ["product_name", "reason", "cetegory", "price"],
                     },
                 },
             });
@@ -125,7 +134,9 @@ export const useProductRecommender = () => {
                 setLoading(false)
             } else {
                 setRecommendation({
+                    cetegory: "",
                     product_name: "No Product found",
+                    price: 0,
                     reason: ""
                 });
                 setLoading(false)

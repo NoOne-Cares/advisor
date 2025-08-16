@@ -10,7 +10,7 @@ export default function InputBox({ query, setInput }: InputProps) {
     const MAX_HEIGHT = 100;
 
     return (
-        <View className="flex w-3/4 rounded-2xl border border-gray-600 flex-row items-center pr-1">
+        <View className="flex rounded-2xl border border-gray-600 flex-row items-center pr-1">
             <TextInput
                 multiline
                 scrollEnabled={inputHeight >= MAX_HEIGHT}
@@ -27,8 +27,6 @@ export default function InputBox({ query, setInput }: InputProps) {
             />
             <TouchableOpacity
                 onPress={() => query()}
-            // disabled={disabled}
-            // style={{ opacity: disabled ? 0.5 : 1 }} // visual feedback for disabled state
             >
                 <Image
                     className='ml-2'

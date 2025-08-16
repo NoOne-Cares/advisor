@@ -12,5 +12,6 @@ export type GeminiCategoryResponse = {
 
 export type GeminiProductRecommendation = {
     product_name: string;
+    price: number;
     reason: string;
 };

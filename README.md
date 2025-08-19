@@ -1,50 +1,108 @@
-# Welcome to your Expo app 👋
+# AI Product Recommendation Chatbot (React Native)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A smart, conversational shopping assistant built with **React Native**. This chatbot suggests the most suitable product from a predefined list based on user input, creating a fast and intuitive product discovery experience.
 
-## Get started
+---
+##  Features
 
-1. Install dependencies
+- Conversational chatbot for product queries
+- Smart product recommendation from predefined data
+- Modular, reusable UI components
+- Tailwind-like styling with NativeWind
+- Real-time feedback via loading and error states
+
+---
+## File Structure
+
+├── App.tsx
+├── assets/
+│   └── icons/                   # Icons used 
+├── components/                   # Reusable UI components
+│   ├── Hero.tsx
+│   ├── InputBox.tsx
+│   └── ProductCard.tsx
+├── utils/
+│   ├── types.ts                 # Type definitions for products
+│   ├── useFetch.ts             # Custom hook for recommendations
+|   └── products.json            # List of Skus
+└── README.md
+
+---
+## Data Flow
+
+- User Input → Typed into the InputBox.
+- Input Trigger → Calls `handleInput()` → runs `recommend()` from useProductRecommender.
+- Recommendation Result → Displayed via ProductCard.
+- Loading/Error States → Managed and shown conditionally via `<ActivityIndicator/>` and `<Text />`.
+
+---
+## High-Level Architecture
+
+                           ┌────────────────────────────┐
+                           │        User Input          │
+                           │  (via InputBox component)  │
+                           └────────────┬───────────────┘
+                                        │
+                                        ▼
+                           ┌────────────────────────────┐
+                           │  handleInput Function      │
+                           │  └─ Validates input        │
+                           │  └─ Calls recommender hook │
+                           └────────────┬───────────────┘
+                                        │
+                                        ▼
+                           ┌────────────────────────────┐
+                           │ useProductRecommender Hook │
+                           │  └─ Fetches or filters     │
+                           │     predefined products    │
+                           │  └─ Returns recommendation │
+                           └────────────┬───────────────┘
+                                        │
+                                        ▼
+                           ┌────────────────────────────┐
+                           │  UI Feedback Components    │
+                           │  ├─ Loading Spinner        │
+                           │  ├─ Error Text             │
+                           │  └─ Hero Section           │
+                           └────────────┬───────────────┘
+                                        │
+                                        ▼
+                           ┌────────────────────────────┐
+                           │    ProductCard Component   │
+                           │  └─ Displays recommended   │
+                           │     product info (name,    │
+                           │     price, reason)   │
+                           └────────────┬───────────────┘
+                                        │
+                                        ▼
+                           ┌────────────────────────────┐
+                           │      Static Assets         │
+                           │    (e.g. Icons, Images)    │
+                           └────────────────────────────┘
+
+---
+## How to Run
+
+1. Create a .env file and add the gemini api key
+```bash
+EXPO_PUBLIC_GEMINI_API_KEY=GEMINI_API_KEY
+```
+2. Install dependencies
 
    ```bash
    npm install
    ```
-
-2. Start the app
+3. Start the app
 
    ```bash
    npx expo start
    ```
+---
 
-In the output, you'll find options to open the app in a
+## Technologies Used
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- React Native (with TypeScript)
+- NativeWind (Tailwind CSS for RN)
+- Gemini API
+- Custom React Hooks
+- Expo 

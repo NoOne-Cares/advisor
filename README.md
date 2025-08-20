@@ -13,7 +13,7 @@ A smart, conversational shopping assistant built with **React Native**. This cha
 
 ---
 ## File Structure
-
+```
 ├── App.tsx
 ├── assets/
 │   └── icons/                   # Icons used 
@@ -26,7 +26,7 @@ A smart, conversational shopping assistant built with **React Native**. This cha
 │   ├── useFetch.ts             # Custom hook for recommendations
 |   └── products.json            # List of Skus
 └── README.md
-
+```
 ---
 ## Data Flow
 
